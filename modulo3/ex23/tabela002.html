@@ -15,6 +15,14 @@
             border-collapse: collapse;
         }
 
+        caption{
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgrey;
+
+        }
+
         td,
         th {
             border: 1px solid black;
@@ -29,16 +37,22 @@
         .num{
             text-align: end;
         }
+
+        tbody tr:nth-child(2n){
+            background-color: lightgray;
+        }
+
     </style>
 </head>
 
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>População das unidades ferderativas</caption>
         <thead>
             <tr>
-                <th>Unidade federativa</th>
-                <th>População</th>
+                <th scope="col">Unidade federativa</th>
+                <th scope="col">População</th>
             </tr>
         </thead>
         <tbody>
@@ -57,7 +71,7 @@
         </tbody>
         <tfoot>
             <tr>
-                <td>Total de habitantes</td>
+                <th scope="row">Total de habitantes</th>
                 <td class="num"><strong>000</strong></td>
             </tr>
         </tfoot>
